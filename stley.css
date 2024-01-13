@@ -1,0 +1,243 @@
+:root {
+    --primaryTextColor: #232e35;
+    --secondaryTextColor: #656d72;
+
+    --bordercolor: #f1f1f1;
+    --linecolor: #d9d9d9;
+
+    --primarybackgroundcolor: #fff;
+    --secondarybackgroudcolor: #fbfbfb;
+    --thirdbackgroudcolor: #f5f3fe;
+
+    --primaryiconcolor: #7e74f1;
+    --primaryiconcolorhover: #5d51e8;
+
+    --sectionpadding: 6rem 0;
+
+    --itemborderradius: 0.7rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--primaryTextColor);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p, span, label, input,textarea, li {
+    color: var(--secondaryTextColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container{
+        width: 90%;
+    }
+}
+
+/* logo */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: var(--primaryTextColor);
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--primaryTextColor);
+}
+
+/* Burger */
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+#hero {
+    height: 520px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+    color: var(--primaryiconcolor);
+}
+
+
+/* Title */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--secondaryTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--linecolor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+#aboutme {
+    background-color: var(--secondarybackgroudcolor);
+    padding: var(--sectionpadding);
+}
+
+.aboutme .pre-title {
+    margin: 0 auto;
+}
+
+.aboutme-title {
+    text-align: center;
+}
+
+.aboutme {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primarybackgroundcolor);
+    border-radius: var(--itemborderradius);
+}
+
+#contact {
+    padding: var(--sectionpadding);
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.contact-form div{
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem, 1.3rem;
+    background: var(--secondarybackgroudcolor);
+    border: 1px solid var(--bordercolor);
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+    color: #9d9fa1;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #7d7d7d;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: .75rem 1.3rem;
+    background-color: var(--primaryiconcolor);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-item-icon{
+    background: var(--thirdbackgroudcolor);
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-icon svg{
+    fill: var(--primaryiconcolor);
+}
+
+.contact-item-detail h4{
+    margin-bottom: 0.6rem;
+}
